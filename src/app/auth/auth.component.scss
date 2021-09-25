@@ -1,0 +1,73 @@
+@import "../../assets/scss/color-pallete";
+main{
+  width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 10rem;
+}
+
+.centralize{
+    display: flex;
+    justify-content: center;
+}
+.img-div{
+  img{
+    width: 12rem;
+  }
+}
+
+.head{
+  font-size: calc(1em + 2.9rem);
+  font-family: ui-monospace;
+}
+.inputs{
+  background-color: $login-chip;
+  border: none;
+    border: none;
+    border-radius: 1rem;
+    color: $white;
+    width: 16rem;
+    height: 2rem;
+    padding-left: 1rem;
+}
+.auth-label{
+    width: 5rem;
+    font-size: 1.4rem;
+}
+#password{
+  width: 14rem;
+    margin-left: 2rem;
+}
+
+.auth-widen{
+  margin: 0.5rem;
+}
+.eye{
+  position: relative;
+    right: 3%;
+    font-size: 15px;
+    margin-top: auto;
+    margin-bottom: auto;
+    cursor: pointer;
+}
+.success{
+  animation: success 2s linear infinite;
+}
+@keyframes success{
+  0%{
+    color: green;
+  }
+  20%{
+    color: rgba(0, 128, 0, 0.575);
+  }
+  40%{
+    color: rgba(43, 255, 0, 0.356);
+  }
+  60%{
+    color: transparent;
+  }
+  100%{
+    color: green;
+  }
+}
+

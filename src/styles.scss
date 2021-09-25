@@ -2,6 +2,68 @@
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+@import './assets/scss/color-pallete';
+@import './assets/scss/variables';
+@import './assets/scss/movie-now-blue-theme.scss';
+@import './assets/scss/movie-now-green-theme.scss';
+@import '~ngx-toastr/toastr';
+@import '~ngx-toastr/toastr-bs4-alert';
+@import '~ngx-toastr/toastr-bs4-alert';
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  background: linear-gradient(
+41deg, $background-secondary 56%, $background 59%, $background-secondary 66%);
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: $font-size;
+  color: $font-color-primary;
+  font-family: $font-family;
+  overscroll-behavior: contain;
+  overflow: hidden;
+}
+
+.danger{
+  animation: blurness 2s linear infinite;
+}
+
+@keyframes blurness{
+  0%{
+    color: red;
+  }
+  20%{
+    color: rgba(255, 0, 0, 0.616);
+  }
+  40%{
+    color: rgba(255, 0, 0, 0.281);
+  }
+  60%{
+    color: transparent;
+  }
+  100%{
+    color: red;
+  }
+}
+
+.submit-box{
+  border: none;
+    background: linear-gradient(
+219deg, #757728, #1da2d6b8 87%);
+    border-radius: 2rem;
+    width: 9rem;
+    height: 2.4rem;
+    color: #d4c6c6;
+    margin: 1rem;
+}
+.disabled{
+  pointer-events: none;
+  opacity: 0.5;
+}
+.toast-success {
+  background-color: green !important;
+}
+.toast-error{
+  background-color: red !important;
+}

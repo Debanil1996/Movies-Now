@@ -1,0 +1,86 @@
+@import "../../../node_modules/@angular/material/theming";
+
+@include mat-core();
+
+$movie-now-accent: (
+  50: #e1f6f1,
+  100: #b5e8dc,
+  200: #84d9c5,
+  300: #53caad,
+  400: #2ebe9c,
+  500: #30336B,
+  600: #08ac82,
+  700: #06a377,
+  800: #059a6d,
+  900: #028b5a,
+  A100: #b7ffe2,
+  A200: #84ffcd,
+  A400: #51ffb8,
+  A700: #37ffad,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  )
+);
+
+$movie-now-primary: (
+  50: #e0e4f9,
+  100: #b3bdef,
+  200: #8091e4,
+  300: #4d64d9,
+  400: #2643d1,
+  500: #009086,
+  600: #001ec3,
+  700: #0019bc,
+  800: #0014b5,
+  900: #000ca9,
+  A100: #d3d4ff,
+  A200: #a0a2ff,
+  A400: #6d70ff,
+  A700: #5358ff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #ffffff,
+    A700: #ffffff,
+  ),
+);
+
+//the first two are the custom palettes we declared above
+$movie-now-theme-primary: mat-palette($movie-now-primary);
+$movie-now-theme-accent: mat-palette($movie-now-accent);
+
+//the third, for the warn color, is the predefined material red palette
+$movie-now-theme-warn: mat-palette($mat-red);
+
+$movie-now-blue: mat-light-theme(
+  $movie-now-theme-primary,
+  $movie-now-theme-accent,
+  $movie-now-theme-warn
+);
+
+.blue-theme {
+  @include angular-material-theme($movie-now-blue);
+}

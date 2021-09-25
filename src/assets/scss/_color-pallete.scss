@@ -1,0 +1,136 @@
+// :root {
+//   --movie-now-primary: #30336b;
+//   --movie-now-secondary: #84d9d0;
+//   --movie-now-background: #ffffff;
+//   --movie-now-font-color: #000000;
+//   --movie-now-box-shadow: rgba(0, 0, 0, 0.12);
+//   --movie-now-background-blur: rgba(255, 255, 255, 0.42);
+//   --movie-now-border: rgb(241, 241, 241);
+// }
+
+:root {
+  --movie-now-primary: #009086;
+  --movie-now-secondary: #4d64d9;
+  --movie-now-background: #00192e;;
+  --movie-now-background-secondary: #040608;
+  --movie-now-font-color: rgba(255, 255, 255, 0.6);
+  --movie-now-box-shadow: #85858533;
+  --movie-now-background-blur: rgba(0, 0, 0, 0.66);
+  --movie-now-border: rgb(35, 35, 35);
+  --graph-background: #04141a;
+  --appointment-selected-card-background: linear-gradient(
+    179deg,
+    #ffffff 1%,
+    #808080 300%
+  );
+
+  --timeline-line: #01ffff;
+  --drugs-model-header: linear-gradient(45deg, #002132 0%, #044346 100%);
+  --button-chip: #000000;
+  --button-chip-light: #000000;
+  --header-hover: linear-gradient(45deg, #2f3d4a, #ffffff00);
+  --booking-chip-text: rgba(255, 255, 255, 0.6);
+  --button-chip-1: #000000;
+  --doctor-select-color: #354146;
+  --color-blue-green: #0087ee;
+  --color-parrotGreen-blue: #01dca3;
+  --color-white-grey: #fff;
+  --login-chip: #363540;
+}
+
+$background-blur: var(--movie-now-background-blur);
+$box-shadow: var(--movie-now-box-shadow);
+$background: var(--movie-now-background);
+$obg-blue: #416f77;
+
+$background-secondary: var(--movie-now-background-secondary);
+$secondary-green: var(--movie-now-secondary);
+$movie-now-primary: var(--movie-now-primary);
+$font-color-primary: var(--movie-now-font-color);
+$movie-now-border: var(--movie-now-border);
+$background-blur-secondary: rgba(220, 220, 220, 0);
+$background-blur-accent: rgba(255, 255, 255, 0.2);
+$background-shade-blur: var(--movie-now-shade-blur);
+$movie-now-tool-kit-background: var(--movie-now-tool-kit-background);
+$graph-background: var(--graph-background);
+$appointment-selected-card-background: var(
+  --appointment-selected-card-background
+);
+$vital-box: var(--vital-box);
+$outline-box: var(--outline-box);
+$rings: var(--rings);
+$timeline-line: var(--timeline-line);
+$small-outline-box: var(--small-outline-box);
+$drugs-model-header: var(--drugs-model-header);
+$login-chip: var(--login-chip);
+$button-chip: var(--button-chip);
+$button-chip-light: var(--button-chip-light);
+$header-hover: var(--header-hover);
+$booking-chip-text: var(--booking-chip-text);
+$button-chip-1: var(--button-chip-1);
+$doctor-select-color: var(--doctor-select-color);
+$color-blue-green: var(--color-blue-green);
+$color-parrotGreen-blue: var(--color-parrotGreen-blue);
+$color-white-grey: var(--color-white-grey);
+
+$drugs-modal-date-header: #0e8a8a54;
+$rhs-green: #01dca3;
+$rhs-blue: #0087ee;
+$rhs-pink: #f558a1;
+
+$selected-background: linear-gradient(
+  90deg,
+  #34647b 0%,
+  rgb(0 140 156 / 55%) 50%,
+  rgb(0 127 142 / 50%) 100%
+);
+
+$white: #ffffff;
+$black: #000000;
+$red: #f44336;
+$pink: #e91e63;
+$purple: #9c27b0;
+$deep-purple: #673ab7;
+$indigo: #3f51b5;
+$blue: #2196f3;
+$light-blue: #00eeff;
+$cyan: #00bcd4;
+$teal: #009688;
+$green: #4caf50;
+$light-green: #8bc34a;
+$lime: #cddc39;
+$yellow: #ffeb3b;
+$amber: #ffc107;
+$orange: #ff9800;
+$deep-orange: #ff5722;
+$brown: #795548;
+$grey: #9e9e9e;
+$blue-grey: #607d8b;
+$dark-grey: #383636;
+$light-grey: lightgrey;
+$transparent: transparent;
+$movie-now-blue: #009086;
+$grey-border: rgb(221, 221, 221);
+$light-border: #d6d6d6;
+$dodger-blue: #1e90ff;
+$parrot-green: #04ff3a;
+$baby-pink: #ff04b0;
+$mat-icon-blue: #01ffff;
+
+// Well Child Milestones
+
+$milestone-1: #eb9a00;
+$milestone-2: #a21a84;
+$milestone-3: #1ca2e1;
+$milestone-4: #c24b3e;
+$hover: rgb(0, 89, 190);
+
+$box-shadow-elevation: 0px 3px 1px -2px $box-shadow, 0px 2px 2px 0px $box-shadow,
+  0px 1px 5px 0px $box-shadow;
+
+// Toastr Colors
+
+$movie-now-success: #0090867c;
+$movie-now-error: #bd362f56;
+$movie-now-info: #4d64d977;
+$movie-now-warning: #f893064b;

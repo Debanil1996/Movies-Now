@@ -1,0 +1,50 @@
+<main>
+  <form [formGroup]="movieForm">
+
+    <div class="container">
+  <div class="row">
+    <div class="col-lg-12 centralize img-div">
+      <img src="../../assets/svgs/lion.jpg" alt="">
+    </div>
+  </div>
+      <div class="row">
+        <div class="col-lg-12 centralize head">Movies Now
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 centralize auth-widen">
+          <label class="auth-label">Login:</label>
+          <input class="inputs" type="text" formControlName="username">
+        </div>
+      </div>
+      <ng-container *ngIf="movieForm.controls.username.status ==='INVALID' &&
+      movieForm.controls.username.touched">
+        <label class="danger centralize">Username is required</label>
+      </ng-container>
+
+      <div class="row">
+        <div class="col-lg-12 centralize auth-widen">
+          <label class="auth-label" >Password:</label>
+          <input class="inputs" id="password" [type]="isActive? 'text':'password'" formControlName="password">
+          <mat-icon class="eye" (click)="isActive=isActive? false:true">{{isActive? 'visibility':'visibility_off'}}</mat-icon>
+        </div>
+      </div>
+      <ng-container *ngIf="movieForm.controls.password.status ==='INVALID' &&
+    movieForm.controls.password.touched">
+      <label class="danger centralize">Password is required</label>
+    </ng-container>
+      <div class="row">
+        <div class="col-lg-12 centralize">
+          <button [ngClass]="{'disabled': movieForm.invalid}" (click)="submit(movieForm.value)" class="submit-box" mat-flat-button>Submit</button>
+        </div>
+
+      </div>
+      <ng-container *ngIf="loginSuccess === false && movieForm.valid">
+      <label class="danger centralize m-2">Login unsuccessful</label>
+    </ng-container>
+      <ng-container *ngIf="loginSuccess === true && movieForm.valid">
+      <label class="success centralize m-2">Login successful</label>
+    </ng-container>
+    </div>
+  </form>
+</main>
