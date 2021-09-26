@@ -1,7 +1,11 @@
 # MoviesNow
-The demo of the project on video is available here
-![](Demo Movies Now.mov)
+The demo of the project on video is available here:
+Features Login and Card Display:
+
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/58136803/134806291-a6eb667f-3f99-4b16-8768-b2c26bb303dd.gif)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0.
+
 
 ## Development server
 
