@@ -42,6 +42,10 @@ export class MainComponent implements OnInit,OnDestroy,AfterViewInit {
 
 
   }
+
+  /**
+   * Search Method to filter users
+   */
   startSearch() {
     const data=this.searchTerm.pipe(debounceTime(250),
     switchMap((value:string)=>{
@@ -60,6 +64,11 @@ export class MainComponent implements OnInit,OnDestroy,AfterViewInit {
       this.cdr.detectChanges();
     })
   }
+
+  /**
+   * API For Cards Method
+   * @param page The page where api to be received
+   */
   getData(page:number) {
     this.isLoading=true;
     const authSub=this._authService.getMovieDetails(page).subscribe((response)=>{
@@ -83,16 +92,26 @@ export class MainComponent implements OnInit,OnDestroy,AfterViewInit {
     this.searchTerm.next(data);
     this.startSearch();
   }
-
+  /**
+   * Event to capture page selected
+   * @param ev Page selected
+   */
   pageSelected(ev){
     this.currentPage=ev;
     this.getData(ev);
   }
-
+  /**
+   * Logout from auth
+   */
   public logout(){
     this._authService.clearStorage();
     this.toast.warning(`Logged out`);
   }
+
+  /**
+   *
+   * Refresh the Api if failed
+   */
   public refresh(){
     this.currentPage=this.currentPage?this.currentPage:1;
       this.getData(this.currentPage);

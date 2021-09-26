@@ -22,7 +22,11 @@ export class CardsComponent implements OnInit,OnChanges {
   ngOnInit(): void {
   }
 
-
+  /**
+   * Get the avatar image
+   * @param title The title of the movie
+   * @returns image
+   */
   public generateImage(title:string){
     const string=_.replace(_.trim(title)," ","+");
     return `https://ui-avatars.com/api/?name=${string}&size=512`;

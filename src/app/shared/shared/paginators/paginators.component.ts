@@ -16,6 +16,10 @@ export class PaginatorsComponent implements OnInit,OnChanges {
       this.pages=changes.pages.currentValue;
     }
   }
+  /**
+   * Event for enabling scrolling
+   * @param way Which way right or left
+   */
   scrolling(way:string){
     if(way==='r'){
       this.scroll.nativeElement.scrollLeft +=50;
@@ -31,7 +35,10 @@ export class PaginatorsComponent implements OnInit,OnChanges {
   ngOnInit(): void {
   }
 
-
+  /**
+   * The selected Image
+   * @param index The index of page selected
+   */
   public selectedIndex(index:number){
     this.indexSelected=index-1;
     this.sendPage.emit(index);

@@ -12,6 +12,7 @@ export class AuthGuard implements CanActivate {
     private _authService: AuthService,
     private _location:Locations
   ){}
+  //Check that token is there or not
   async canActivate(route:ActivatedRouteSnapshot,state:RouterStateSnapshot){
     if(localStorage.getItem("Token")){
        return true;

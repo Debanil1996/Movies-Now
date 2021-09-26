@@ -21,7 +21,10 @@ export class SpinnerComponent implements OnInit,OnDestroy {
     this.spinner.show();
     this.cdr.reattach();
   }
-
+  /**
+   * For idleness aversion
+   * @returns Show random quotes
+   */
   public quotesRandom(){
     const quotes=[
       "Movies the embodiment of Entertainment",

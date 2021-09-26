@@ -12,7 +12,12 @@ import {mergeMap} from  "rxjs/operators"
 export class AuthHeaderInterceptor implements HttpInterceptor {
     constructor(){
     }
-
+    /**
+     * Intercepter for headers on http
+     * @param req Http Request
+     * @param next Handler for new Execution
+     * @returns
+     */
     intercept(req: HttpRequest<any>, next: HttpHandler) {
         const token=localStorage.getItem("Token");
           if(token === undefined ||
