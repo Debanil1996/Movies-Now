@@ -1,8 +1,17 @@
 # MoviesNow
 The demo of the project on video is available here:
-Features Login and Card Display:
+- Features Login and Card Display:
 
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/58136803/134806291-a6eb667f-3f99-4b16-8768-b2c26bb303dd.gif)
+
+- Modal Opening feature
+
+![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/58136803/134813119-047ea143-2dda-482e-b14b-632710837a69.gif)
+
+- Refresh and Search Feature
+
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/58136803/134813140-c294e9a8-e7ae-49e6-872a-6552af88b35f.gif)
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0.
 
