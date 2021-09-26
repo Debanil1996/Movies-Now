@@ -1,1 +1,26 @@
-<p>main works!</p>
+<div class="logout" (click)="logout()">
+  <img src="assets/svgs/logout.png">
+  <label >logout</label>
+</div>
+<main>
+  <header>
+    <div class="container">
+      <div class="row d-flex flex-nowrap">
+        <div class="col-lg-12 centralize head">Movies Now &nbsp; <img src="https://wallpapercave.com/wp/wp5223134.jpg"  alt="">
+        </div>
+      </div>
+    </div>
+  </header>
+  <div>
+    <ehr-paginators [pages]="pageNumbers" (sendPage)="pageSelected($event)"></ehr-paginators>
+  </div>
+  <div>
+    <ng-container *ngIf="isLoading">
+      <ehr-spinner></ehr-spinner>
+    </ng-container>
+    <ng-container *ngIf="!isLoading">
+      <ehr-cards [movie]="movieData"></ehr-cards>
+    </ng-container>
+
+  </div>
+</main>

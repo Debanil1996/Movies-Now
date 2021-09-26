@@ -1,0 +1,18 @@
+<main>
+<div class="container">
+  <div class="row d-flex flex-row flex-nowrap">
+    <div (click)="scrolling('l')" class="col-lg-1">
+      <img  src="assets/svgs/Arrow-left-movie-now.png" class="arrows" alt="Right Arrow">
+    </div>
+    <div class="col-lg-10 d-flex flex-row  centered" #scrollable>
+      <div (click)="selectedIndex(i+1)"
+      [ngClass]="{'active-page': indexSelected === i}"
+      class="paginator-number" *ngFor="let page of pages;let i=index">{{i+1}}</div>
+
+    </div>
+    <div (click)="scrolling('r')" class="col-lg-1">
+      <img  src="assets/svgs/Arrow-left-movie-now.png" class="arrows right" alt="Right Arrow">
+    </div>
+  </div>
+</div>
+</main>

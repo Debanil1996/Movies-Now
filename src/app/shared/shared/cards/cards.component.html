@@ -1,0 +1,23 @@
+
+<main>
+    <div class="container">
+      <div class="row d-flex overflow-card">
+        <div class="col-lg-3 adjust-margin" *ngFor="let movie of movieData; let i=index">
+          <mat-card class="neumorphism-invards card-background">
+            <mat-card-title class="text-truncate">{{movie.title || ''}}</mat-card-title>
+            <mat-card-subtitle>{{movie.genres === ''? 'No Genre':movie.genres}}</mat-card-subtitle>
+            <mat-card-content>
+              <div class="container">
+                <div class="row">
+                  <img [src]="generateImage(movie.title)" alt="" srcset="">
+                </div>
+                <div class="row">
+                  <span class="margin-adjust text-truncate">{{movie.description || ''}}</span>
+                </div>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+</main>

@@ -5,6 +5,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import {Location as Locations} from "@angular/common"
 import {Login} from "../models/login";
 import { Router } from '@angular/router';
+import * as moment from 'moment';
 @Component({
   selector: 'app-auth',
   templateUrl: './auth.component.html',
@@ -24,6 +25,7 @@ export class AuthComponent implements OnInit {
 
   ngOnInit() {
     this.movieForm=this.buildForm();
+    this.authService.checkExpiry();
   }
   buildForm() {
     return new FormGroup({
@@ -39,6 +41,7 @@ export class AuthComponent implements OnInit {
     const authSub=this.authService.postLogin(valuegot).subscribe((response)=>{
       if(response[`is_success`] === true){
         localStorage.setItem("Token",response[`data`][`token`]);
+        localStorage.setItem("Time",moment().format("yyyy-MM-DD hh:mm"));
         this.loginSuccess=true;
         this.toast.success(`User is Logged In`);
         this.movieForm.enable();
@@ -56,3 +59,4 @@ export class AuthComponent implements OnInit {
   }
 
 }
+
