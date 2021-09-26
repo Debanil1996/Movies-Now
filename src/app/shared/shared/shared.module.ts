@@ -5,10 +5,11 @@ import { CardsComponent } from './cards/cards.component';
 import { MaterialModuleNew } from 'src/app/material.module';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { SpinnerComponent } from './spinner/spinner.component';
+import { CardDisplayComponent } from './card-display/card-display.component';
 
 
 @NgModule({
-  declarations: [PaginatorsComponent, CardsComponent, SpinnerComponent],
+  declarations: [PaginatorsComponent, CardsComponent, SpinnerComponent, CardDisplayComponent],
   imports: [
     CommonModule,
     MaterialModuleNew,
@@ -17,13 +18,15 @@ import { SpinnerComponent } from './spinner/spinner.component';
   exports:[
     PaginatorsComponent,
     CardsComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    CardDisplayComponent
   ],
   providers:[],
   entryComponents:[
     PaginatorsComponent,
     CardsComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    CardDisplayComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

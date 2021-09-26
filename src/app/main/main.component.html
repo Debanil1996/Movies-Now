@@ -2,7 +2,15 @@
   <img src="assets/svgs/logout.png">
   <label >logout</label>
 </div>
+<div class="refresh" *ngIf="showRefresh" (click)="refresh()">
+  <mat-icon>refresh</mat-icon>
+  <small>refresh</small>
+</div>
+
 <main>
+  <div class="search">
+    <input class="inputs" id="password" type="text" placeholder="Search" (keyup)="search($event.target.value)">
+  </div>
   <header>
     <div class="container">
       <div class="row d-flex flex-nowrap">
@@ -19,7 +27,7 @@
       <ehr-spinner></ehr-spinner>
     </ng-container>
     <ng-container *ngIf="!isLoading">
-      <ehr-cards [movie]="movieData"></ehr-cards>
+      <ehr-cards [movie]="movieData | async"></ehr-cards>
     </ng-container>
 
   </div>

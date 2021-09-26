@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row d-flex overflow-card">
         <div class="col-lg-3 adjust-margin" *ngFor="let movie of movieData; let i=index">
-          <mat-card class="neumorphism-invards card-background">
+          <mat-card class="neumorphism-invards card-background" (click)="openDialog(movie)">
             <mat-card-title class="text-truncate">{{movie.title || ''}}</mat-card-title>
             <mat-card-subtitle>{{movie.genres === ''? 'No Genre':movie.genres}}</mat-card-subtitle>
             <mat-card-content>

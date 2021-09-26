@@ -28,3 +28,34 @@ main{
       width: 2rem;
     }
 }
+.refresh{
+  position: absolute;
+    left: calc(100% - 9%);
+    display: flex;
+    top: 3%;
+    flex-flow: column;
+    cursor: pointer;
+    mat-icon{
+      font-size: 2.4rem;
+    }
+    small{
+      position: relative;
+    top: 0.4rem;
+    font-size: 1rem;
+    }
+}
+
+.inputs{
+  background-color: $login-chip;
+  border: none;
+    border: none;
+    border-radius: 1rem;
+    color: $white;
+    width: 16rem;
+    height: 2rem;
+    padding-left: 1rem;
+}
+.search{
+  position: relative;
+    left: calc(100% - 97%);
+}

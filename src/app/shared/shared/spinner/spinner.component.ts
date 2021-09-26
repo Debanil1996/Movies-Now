@@ -28,6 +28,7 @@ export class SpinnerComponent implements OnInit,OnDestroy {
       "There are lots of new Features",
       "The source of Knowledge comes from Movies"
     ]
+    this.cdr.markForCheck();
     const number=Math.floor(Math.random() * 2);
     return quotes[number];
 

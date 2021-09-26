@@ -1,0 +1,31 @@
+<main>
+  <div class="container">
+    <div class="row spacious">
+      <h1>{{receiveCardData.title}}</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-12 image-head">
+        <img [src]="generateImage(receiveCardData.title)" alt="">
+      </div>
+    </div>
+    <div class="row spacious">
+      <h1>Genres</h1>
+    </div>
+   <div class="row">
+      <div class="col-lg-12">
+        <span>{{receiveCardData.genres}}</span>
+      </div>
+    </div>
+    <div class="row spacious">
+      <h1>Description</h1>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <p style="text-align: justify;">
+          {{receiveCardData.description}}
+        </p>
+      </div>
+    </div>
+  </div>
+
+</main>
