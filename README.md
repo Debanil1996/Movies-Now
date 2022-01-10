@@ -12,10 +12,9 @@ The demo of the project on video is available here:
 
 ![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/58136803/134813140-c294e9a8-e7ae-49e6-872a-6552af88b35f.gif)
 
+##How To Start The Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0 and the live server od aws CICD Pipeline 
-
-[Click me to go to Aws Server!](http://movies-now.s3-website.ap-south-1.amazonaws.com)
+Run `npm i` to load the node modules and start the server by command line `ng serve -o`
 
 
 ## Development server
